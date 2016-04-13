@@ -41,6 +41,7 @@ class photoMetaViewController: UIViewController {
             displayedPhoto!.liked = false
             likes.text = String(displayedPhoto!.likes)
             likeButton.setImage(UIImage(named: "emptyHeart.jpg"), forState: .Normal)
+            
         } else {
             displayedPhoto!.liked = true
             likeButton.setImage(UIImage(named: "filledHeart.jpg"), forState: .Normal)

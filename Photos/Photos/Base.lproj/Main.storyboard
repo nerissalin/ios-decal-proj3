@@ -129,9 +129,14 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtH-g5-vII">
                                         <rect key="frame" x="334" y="426" width="50" height="50"/>
-                                        <state key="normal" image="Photos/filledHeart.jpg"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <state key="normal" title="Like">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <variation key="heightClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="346" y="436" width="16" height="22"/>
+                                            <rect key="frame" x="333" y="423" width="51" height="38"/>
                                         </variation>
                                     </button>
                                 </subviews>
@@ -167,7 +172,4 @@
             <point key="canvasLocation" x="936" y="327.75"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Photos/filledHeart.jpg" width="16" height="16"/>
-    </resources>
 </document>
