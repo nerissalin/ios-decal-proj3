@@ -13,8 +13,11 @@ class Photo {
     var likes : Int!
     /* The string of the url to the photo file. */
     var url : String!
+    var thumbnail : String!
     /* The username of the photographer. */
     var username : String!
+    var liked: Bool = false
+    var date: String!
 
     /* Parses a NSDictionary and creates a photo object. */
     init (data: NSDictionary) {
@@ -23,10 +26,8 @@ class Photo {
         self.username = data.valueForKey("user")?.valueForKey("username") as! String
         self.likes = data.valueForKey("likes")?.valueForKey("count") as! Int
         self.url = data.valueForKey("images")?.valueForKey("standard_resolution")?.valueForKey("url") as! String
-
-
-        
-
+        self.thumbnail = data.valueForKey("images")?.valueForKey("thumbnail")?.valueForKey("url")as! String
+        self.date = data.valueForKey("created_time")as! String
     }
 
 }
